@@ -1,0 +1,18 @@
+{
+    "name": "albet/xiirpl1",
+    "description": "Website Album XII RPL 1",
+    "type": "project",
+    "license": "CC0-1.0",
+    "autoload": {
+        "psr-4": {
+            "Xii\\Rpl1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "albetnovendo",
+            "email": "ryxinfrvr@gmail.com"
+        }
+    ],
+    "require": {}
+}
