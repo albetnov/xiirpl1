@@ -14,5 +14,7 @@
             "email": "ryxinfrvr@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "latte/latte": "^2.11"
+    }
 }

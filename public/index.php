@@ -4,6 +4,7 @@
 
 require_once '../vendor/autoload.php';
 
+use Xii\Rpl1\Helper;
 use Xii\Rpl1\Parser;
 
 function about()
@@ -18,14 +19,12 @@ function about()
             'jabatan' => 'Wakil Ketua Kelas'
         ]
     ]);
-    require_once '../src/about-us.php';
-    exit;
+    return Helper::render('about-us', compact('data'));
 }
 
 function home()
 {
-    require_once '../src/home.php';
-    exit;
+    return Helper::render('home');
 }
 
 if (isset($_GET['url'])  && $_GET['url'] == 'about') {

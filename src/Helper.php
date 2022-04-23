@@ -2,6 +2,8 @@
 
 namespace Xii\Rpl1;
 
+use Latte\Engine;
+
 class Helper
 {
     private static function get_http_protocol()
@@ -30,5 +32,19 @@ class Helper
     public static function asset()
     {
         return self::baseUrl() . '/public/';
+    }
+
+    public static function render($viewPath, $data = [])
+    {
+        $latte = new Engine;
+        $path = __DIR__ . '/tmp';
+        if (!is_dir($path)) {
+            mkdir(__DIR__ . 'tmp');
+            mkdir($path);
+        }
+
+        $latte->setTempDirectory($path);
+
+        return $latte->render(__DIR__ . '/' . $viewPath . '.latte', $data);
     }
 }
