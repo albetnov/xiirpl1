@@ -4,6 +4,13 @@ namespace Xii\Rpl1;
 
 class Parser
 {
+    /**
+     * Digunakan untuk mengembalikkan div element yang di proses dari array
+     * 
+     * @param array $data
+     * 
+     * @return string
+     */
     public static function parse(array $data): string
     {
         $output = "";
