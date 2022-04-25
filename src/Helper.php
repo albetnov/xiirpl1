@@ -8,72 +8,74 @@ class Helper
 {
     /**
      * Mendapatkan protocol dari url host.
-     * 
+     *
      * @return string
      */
     private static function get_http_protocol()
     {
         if (!empty($_SERVER['HTTPS'])) {
-            return "https";
+            return 'https';
         } else {
-            return "http";
+            return 'http';
         }
     }
 
     /**
-     * Mengembalikan URL yang sudah di format
-     * 
+     * Mengembalikan URL yang sudah di format.
+     *
      * @param string $url
-     * 
+     *
      * @return string
      */
     public static function url(string $path): string
     {
-        $port = isset($_SERVER['SERVER_PORT']) ? ':' . $_SERVER['SERVER_PORT'] : '';
-        return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'] . $port . '/?url=' . $path;
+        $port = isset($_SERVER['SERVER_PORT']) ? ':'.$_SERVER['SERVER_PORT'] : '';
+
+        return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'].$port.'/?url='.$path;
     }
 
     /**
-     * Mengembalikan URL utama dan portnya (jika ada)
-     * 
+     * Mengembalikan URL utama dan portnya (jika ada).
+     *
      * @return string
      */
     public static function baseUrl()
     {
-        $port = isset($_SERVER['SERVER_PORT']) ? ':' . $_SERVER['SERVER_PORT'] : '';
-        return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'] . $port;
+        $port = isset($_SERVER['SERVER_PORT']) ? ':'.$_SERVER['SERVER_PORT'] : '';
+
+        return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'].$port;
     }
 
-    /** 
+    /**
      * Mengembalikan url yang menuju ke asset. Digunakan untuk memanggil file css dan js atau resource-resource lainnya
      * yang terdapat di folder public.
-     * 
+     *
      * @return string
      */
     public static function asset()
     {
-        return self::baseUrl() . '/';
+        return self::baseUrl().'/';
     }
 
     /**
      * Digunakan untuk menrender view yang di inginkan berserta datanya.
-     * 
+     *
      * @param string $viewPath
-     * @param array $data
-     * 
+     * @param array  $data
+     *
      * @return Latte\Engine
      */
     public static function render($viewPath, $data = [])
     {
-        $latte = new Engine;
-        $path = __DIR__ . '/tmp';
+        $latte = new Engine();
+        $path = __DIR__.'/tmp';
         if (!is_dir($path)) {
-            mkdir(__DIR__ . 'tmp');
+            mkdir(__DIR__.'tmp');
             mkdir($path);
         }
 
         $latte->setTempDirectory($path);
 
-        return $latte->render(__DIR__ . '/' . $viewPath . '.latte', $data);
+        return $latte->render(__DIR__.'/'.$viewPath.'.latte', $data);
     }
 }
