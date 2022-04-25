@@ -1,7 +1,52 @@
-{layout 'layout/main.latte'}
-{block title}Tentang Kami{/block}
-{block content}
-  <article>
+<?php
+
+use Latte\Runtime as LR;
+
+/** source: F:\laragon\www\xiirpl1\src/about-us.latte */
+final class Template54a18ba531 extends Latte\Runtime\Template
+{
+	protected const BLOCKS = [
+		['title' => 'blockTitle', 'content' => 'blockContent'],
+	];
+
+
+	public function main(): array
+	{
+		extract($this->params);
+		if ($this->getParentName()) {
+			return get_defined_vars();
+		}
+		$this->renderBlock('title', get_defined_vars()) /* line 2 */;
+		echo "\n";
+		$this->renderBlock('content', get_defined_vars()) /* line 3 */;
+		echo '
+    ';
+		return get_defined_vars();
+	}
+
+
+	public function prepare(): void
+	{
+		extract($this->params);
+		$this->parentName = 'layout/main.latte';
+		
+	}
+
+
+	/** {block title} on line 2 */
+	public function blockTitle(array $ʟ_args): void
+	{
+		echo 'Tentang Kami';
+	}
+
+
+	/** {block content} on line 3 */
+	public function blockContent(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		unset($ʟ_args);
+		echo '  <article>
     <header class="section-top-padding background-white">
       <div class="line text-center">
         <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">
@@ -16,7 +61,7 @@
       <div class="line">
         <div class="margin">
           <div class="s-12 m-12 l-4 margin-m-bottom">
-            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-03.jpg" alt="" /></a>
+            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-03.jpg" alt=""></a>
             <h2>Soluta esse molestie</h2>
             <p class="margin-bottom">
               Duis autem vel eum iriure dolor in hendrerit in vulputate
@@ -25,7 +70,7 @@
             </p>
           </div>
           <div class="s-12 m-12 l-4 margin-m-bottom">
-            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-04.jpg" alt="" /></a>
+            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-04.jpg" alt=""></a>
             <h2>Dolore feugiat nulla</h2>
             <p class="margin-bottom">
               Iriure dolor in hendrerit duis autem vel eum in vulputate
@@ -34,7 +79,7 @@
             </p>
           </div>
           <div class="s-12 m-12 l-4 margin-m-bottom">
-            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-05.jpg" alt="" /></a>
+            <a class="image-hover-zoom margin-bottom" href="/"><img src="img/img-05.jpg" alt=""></a>
             <h2>Consequat vel illum</h2>
             <p class="margin-bottom">
               Hendrerit in vulputate velit esse molestie consequat, vel
@@ -152,7 +197,9 @@
                 ></a>
               </div>
             </div> -->
-          {$data|noEscape}
+          ';
+		echo $data /* line 155 */;
+		echo '
         </div>
       </div>
     </section>
@@ -167,44 +214,46 @@
         </p>
         <div class="margin2x">
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-5.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-5.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-2.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-2.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-3.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-3.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-4.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-4.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-5.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-5.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-bottom-40" src="img/logo-1.png" alt="" />
+            <img class="margin-bottom-40" src="img/logo-1.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-m-bottom-40" src="img/logo-2.png" alt="" />
+            <img class="margin-m-bottom-40" src="img/logo-2.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-m-bottom-40" src="img/logo-3.png" alt="" />
+            <img class="margin-m-bottom-40" src="img/logo-3.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-m-bottom-40" src="img/logo-4.png" alt="" />
+            <img class="margin-m-bottom-40" src="img/logo-4.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-m-bottom-40" src="img/logo-1.png" alt="" />
+            <img class="margin-m-bottom-40" src="img/logo-1.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img class="margin-m-bottom-40" src="img/logo-3.png" alt="" />
+            <img class="margin-m-bottom-40" src="img/logo-3.png" alt="">
           </div>
           <div class="s-6 m-4 l-2">
-            <img src="img/logo-4.png" alt="" />
+            <img src="img/logo-4.png" alt="">
           </div>
         </div>
       </div>
     </section>
   </article>
-{/block}
-    
+';
+	}
+
+}

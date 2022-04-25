@@ -1,7 +1,50 @@
-{layout 'layout/main.latte'}
-{block title}Home{/block}
-{block content}
-  <article>
+<?php
+
+use Latte\Runtime as LR;
+
+/** source: F:\laragon\www\xiirpl1\src/home.latte */
+final class Template504d6ed8be extends Latte\Runtime\Template
+{
+	protected const BLOCKS = [
+		['title' => 'blockTitle', 'content' => 'blockContent'],
+	];
+
+
+	public function main(): array
+	{
+		extract($this->params);
+		if ($this->getParentName()) {
+			return get_defined_vars();
+		}
+		$this->renderBlock('title', get_defined_vars()) /* line 2 */;
+		echo "\n";
+		$this->renderBlock('content', get_defined_vars()) /* line 3 */;
+		echo '
+      
+    ';
+		return get_defined_vars();
+	}
+
+
+	public function prepare(): void
+	{
+		extract($this->params);
+		$this->parentName = 'layout/main.latte';
+		
+	}
+
+
+	/** {block title} on line 2 */
+	public function blockTitle(array $ʟ_args): void
+	{
+		echo 'Home';
+	}
+
+
+	/** {block content} on line 3 */
+	public function blockContent(array $ʟ_args): void
+	{
+		echo '  <article>
     <header class="section background-white">
       <div class="line text-center">
         <h1 class="text-dark text-s-size-30 text-m-size-40 text-l-size-headline text-thin text-line-height-1">
@@ -17,7 +60,7 @@
       <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
         Pinned
       </h3>
-      <hr />
+      <hr>
       <div class="s-12 m-6 l-five">
         <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
           <div class="image-hover-overlay-content text-center padding-2x">
@@ -31,7 +74,9 @@
                   euismod.
                 </p> -->
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-01.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 34 */;
+		echo 'img/portfolio/thumb-01.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -66,7 +111,9 @@
             </div>
 
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-02.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 69 */;
+		echo 'img/portfolio/thumb-02.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -84,7 +131,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-03.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 87 */;
+		echo 'img/portfolio/thumb-03.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -102,7 +151,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-04.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 105 */;
+		echo 'img/portfolio/thumb-04.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five margin-bottom">
@@ -120,14 +171,16 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-05.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 123 */;
+		echo 'img/portfolio/thumb-05.jpg" alt="">
         </a>
       </div>
 
       <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
         Album
       </h3>
-      <hr />
+      <hr>
 
       <div class="s-12 m-6 l-five">
         <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
@@ -144,7 +197,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-06.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 147 */;
+		echo 'img/portfolio/thumb-06.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -162,7 +217,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-07.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 165 */;
+		echo 'img/portfolio/thumb-07.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -180,7 +237,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-08.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 183 */;
+		echo 'img/portfolio/thumb-08.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -198,7 +257,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-09.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 201 */;
+		echo 'img/portfolio/thumb-09.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -216,7 +277,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-10.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 219 */;
+		echo 'img/portfolio/thumb-10.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -234,7 +297,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-11.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 237 */;
+		echo 'img/portfolio/thumb-11.jpg" alt="">
         </a>
       </div>
 
@@ -253,7 +318,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-12.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 256 */;
+		echo 'img/portfolio/thumb-12.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -271,7 +338,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-01.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 274 */;
+		echo 'img/portfolio/thumb-01.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -289,7 +358,9 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-02.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 292 */;
+		echo 'img/portfolio/thumb-02.jpg" alt="">
         </a>
       </div>
       <div class="s-12 m-6 l-five">
@@ -307,11 +378,14 @@
               </p>
             </div>
           </div>
-          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-03.jpg" alt="" />
+          <img class="full-img" src="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 310 */;
+		echo 'img/portfolio/thumb-03.jpg" alt="">
         </a>
       </div>
     </div>
   </article>
-{/block}
-      
-    
+';
+	}
+
+}

@@ -52,7 +52,7 @@ class Helper
      */
     public static function asset()
     {
-        return self::baseUrl() . '/public/';
+        return self::baseUrl() . '/';
     }
 
     /**
