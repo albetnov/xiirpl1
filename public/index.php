@@ -35,7 +35,14 @@ function about()
  */
 function home()
 {
-    return Helper::render('home');
+    $albums = [];
+    $dir = scandir('img/album/');
+    for ($i = 0; $i < count($dir); $i++) {
+        if ($dir[$i] != '.' && $dir[$i] != '..') {
+            $albums[] = $dir[$i];
+        }
+    }
+    return Helper::render('home', compact('albums'));
 }
 
 /**
