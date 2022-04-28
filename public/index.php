@@ -2,7 +2,7 @@
 
 // Entry Point (All logic required by views belongs to this file.)
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Xii\Rpl1\Helper;
 use Xii\Rpl1\Parser;
@@ -36,7 +36,7 @@ function about()
 function home()
 {
     $albums = [];
-    $dir = scandir('img/album/');
+    $dir = scandir(__DIR__ . '/img/album/');
     for ($i = 0; $i < count($dir); $i++) {
         if ($dir[$i] != '.' && $dir[$i] != '..') {
             $albums[] = $dir[$i];
