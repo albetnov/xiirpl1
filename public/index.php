@@ -42,6 +42,7 @@ function home()
             $albums[] = $dir[$i];
         }
     }
+
     return Helper::render('home', compact('albums'));
 }
 
