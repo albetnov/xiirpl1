@@ -44,15 +44,18 @@ final class Templatec84b45590f extends Latte\Runtime\Template
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 13 */;
 		echo 'css/lightcase.css">
   <!-- CUSTOM STYLE -->
-  <link rel="stylesheet" href="';
+  <link rel="icon" type="image/x-icon" href="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 15 */;
+		echo '/img/LogoRPL1.ico">
+  <link rel="stylesheet" href="';
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 16 */;
 		echo 'css/template-style.css">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 17 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 18 */;
 		echo 'js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 18 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 19 */;
 		echo 'js/jquery-ui.min.js"></script>
 </head>
 
@@ -66,12 +69,12 @@ final class Templatec84b45590f extends Latte\Runtime\Template
           <a href="index.html" class="logo">
             <!-- Logo version before sticky nav -->
             <img class="logo-before" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 30 */;
-		echo 'img/logo-dark.png" alt="">
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 31 */;
+		echo 'img/LogoRPL1WithTextdark.png" alt="">
             <!-- Logo version after sticky nav -->
             <img class="logo-after" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 32 */;
-		echo 'img/logo-dark.png" alt="">
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 33 */;
+		echo 'img/LogoRPL1WithTextdark.png" alt="">
           </a>
         </div>
         <div class="s-12 l-10">
@@ -79,10 +82,10 @@ final class Templatec84b45590f extends Latte\Runtime\Template
             <p class="nav-text"></p>
             <ul class="right chevron">
               <li><a href="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::baseUrl())) /* line 39 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::baseUrl())) /* line 40 */;
 		echo '">Halaman Utama</a></li>
               <li><a href="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::url('about'))) /* line 40 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::url('about'))) /* line 41 */;
 		echo '">Tentang Kami</a></li>
             </ul>
           </div>
@@ -94,7 +97,7 @@ final class Templatec84b45590f extends Latte\Runtime\Template
     <main role="main">
       <!-- Content -->
       ';
-		$this->renderBlock('content', get_defined_vars()) /* line 50 */;
+		$this->renderBlock('content', get_defined_vars()) /* line 51 */;
 		echo '
     </main>
 
@@ -127,16 +130,16 @@ final class Templatec84b45590f extends Latte\Runtime\Template
     </footer>
   </div>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 81 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 82 */;
 		echo 'js/responsee.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 82 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 83 */;
 		echo 'js/jquery.events.touch.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 83 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 84 */;
 		echo 'owl-carousel/owl.carousel.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 84 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 85 */;
 		echo 'js/template-scripts.js"></script>
 </body>
 
@@ -152,7 +155,7 @@ final class Templatec84b45590f extends Latte\Runtime\Template
 	}
 
 
-	/** {block content} on line 50 */
+	/** {block content} on line 51 */
 	public function blockContent(array $ʟ_args): void
 	{
 		

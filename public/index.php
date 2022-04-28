@@ -43,7 +43,15 @@ function home()
         }
     }
 
-    return Helper::render('home', compact('albums'));
+    $potraits = [];
+    $dir2 = scandir(__DIR__ . '/img/potrait/');
+    for ($i = 0; $i < count($dir2); $i++) {
+        if ($dir2[$i] != '.' && $dir2[$i] != '..') {
+            $potraits[] = $dir2[$i];
+        }
+    }
+
+    return Helper::render('home', compact(['albums', 'potraits']));
 }
 
 /**

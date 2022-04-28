@@ -33,7 +33,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-01.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151457_IMG_4523.jpg" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -68,7 +68,7 @@
           </div>
 
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-02.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151548_IMG_4527.jpg" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -86,7 +86,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-03.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151601_IMG_4528.jpg" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -104,7 +104,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-04.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151529_IMG_4526.jpg" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five margin-bottom">
@@ -122,19 +122,32 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/portfolio/thumb-05.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151502_IMG_4524.jpg" alt="" />
       </a>
     </div>
 
     <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
-      Album
+      Landscape
     </h3>
     <hr />
 
     {foreach $albums as $album}
     <div class="s-12 m-6 l-five">
       <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/{$album}" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/{$album}" alt="" style="height: 180px"/>
+      </a>
+    </div>
+    {/foreach}
+
+    <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
+      Potrait
+    </h3>
+    <hr />
+
+    {foreach $potraits as $potrait}
+    <div class="s-12 m-6 l-five">
+      <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/potrait/{$potrait}" alt=""/>
       </a>
     </div>
     {/foreach}
