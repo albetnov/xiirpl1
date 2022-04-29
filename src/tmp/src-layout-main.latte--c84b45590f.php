@@ -114,7 +114,9 @@ final class Templatec84b45590f extends Latte\Runtime\Template
       <section class="padding background-dark full-width">
         <div class="text-center">
           <p class="text-size-12">
-            Copyright 2019 by XII RPL 1 Team. All rights reserved.
+            Copyright ';
+		echo LR\Filters::escapeHtmlText(date('Y')) /* line 65 */;
+		echo ' by XII RPL 1 Team. All rights reserved.
           </p>
           <p class="text-size-12">
             <strong>
@@ -127,7 +129,7 @@ final class Templatec84b45590f extends Latte\Runtime\Template
               FOTO INI TANPA PERSETUJUAN DARI PEMILIK.
             </strong>
             <br>
-            Edit this page on <b>Github</b>
+            Edit this page on <b><a href="https://github.com/albetnov/xiirpl1" target="_blank">Github</a></b>
           </p>
         </div>
       </section>

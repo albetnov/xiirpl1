@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>??RPL 1??</title>
+</head>
+
+<body>
+    <form action="{=Xii\Rpl1\Helper::url(rplsatu)}" method="POST">
+        <input type="hidden" value="{token()}" name="token" />
+        <input type="password" name="password">
+        <p n:if="isset($error)" style="color:red">{$error}</p>
+        <button type="submit" name="kirim" value="kirim">Kirim</button>
+    </form>
+</body>
+
+</html>
