@@ -20,32 +20,36 @@ if (!isset($_SESSION['token'])) {
 function about()
 {
     $data = Parser::parse([
+        'Bu Nur' => [
+            'gambar' => 'bunur.jpg',
+            'jabatan' => 'Wali Kelas'
+        ],
         'Vincent' => [
-            'gambar'  => 'team-01.jpg',
+            'gambar'  => 'vincent.jpg',
             'jabatan' => 'Ketua Kelas',
         ],
         'Riyadi' => [
-            'gambar'  => 'team-02.jpg',
+            'gambar'  => 'riyadi.jpg',
             'jabatan' => 'Wakil Ketua Kelas',
         ],
         'Ricky' => [
-            'gambar' => 'team-03.jpg',
+            'gambar' => 'ricky.jpg',
             'jabatan' => 'Bendahara'
         ],
         'Afina' => [
-            'gambar' => 'team-04.jpg',
+            'gambar' => 'afina.jpg',
             'jabatan' => 'Sektaris'
         ],
         'Hernando' => [
-            'gambar' => 'team-05.jpg',
+            'gambar' => 'hernando.jpg',
             'jabatan' => 'Keamanan'
         ],
         'Kimberly' => [
-            'gambar' => 'team-06.jpg',
+            'gambar' => 'kimberly.jpg',
             'jabatan' => 'Koordinator Lomba'
         ],
         'Maher' => [
-            'gambar' => 'team-07.jpg',
+            'gambar' => 'maher.jpg',
             'jabatan' => 'Koordinator Lomba'
         ]
     ]);

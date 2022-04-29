@@ -21,7 +21,7 @@ class Parser
                 <div class="padding">
                     <img
                         class="full-img border-image border-primary"
-                        src="img/{$value['gambar']}"
+                        src="img/classes/{$value['gambar']}"
                         alt="{$key}"
                         title="{$key}"
                     />
