@@ -36,19 +36,15 @@ function about()
 function home()
 {
     $albums = [];
-    $dir = scandir(__DIR__ . '/img/album/');
-    for ($i = 0; $i < count($dir); $i++) {
-        if ($dir[$i] != '.' && $dir[$i] != '..') {
-            $albums[] = $dir[$i];
-        }
+    $dir = array_diff(scandir(__DIR__ . '/img/album/'), ['.', '..']);
+    foreach ($dir as $file) {
+        $albums[] = $file;
     }
 
     $potraits = [];
-    $dir2 = scandir(__DIR__ . '/img/potrait/');
-    for ($i = 0; $i < count($dir2); $i++) {
-        if ($dir2[$i] != '.' && $dir2[$i] != '..') {
-            $potraits[] = $dir2[$i];
-        }
+    $dir2 = array_diff(scandir(__DIR__ . '/img/potrait/'), ['.', '..']);
+    foreach ($dir2 as $file) {
+        $potraits[] = $file;
     }
 
     return Helper::render('home', compact(['albums', 'potraits']));

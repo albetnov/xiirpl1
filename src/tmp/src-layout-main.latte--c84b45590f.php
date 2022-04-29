@@ -104,7 +104,9 @@ final class Templatec84b45590f extends Latte\Runtime\Template
     <!-- FOOTER -->
     <footer style="margin-top:1em">
       <div class="background-dark padding text-center footer-social">
-        <strong>Some Quote</strong>
+        <strong>';
+		echo LR\Filters::escapeHtmlText($quotes) /* line 57 */;
+		echo '</strong>
       </div>
       <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 0, 0, 0.8)">
 
@@ -124,22 +126,24 @@ final class Templatec84b45590f extends Latte\Runtime\Template
               FOTO INI DILINDUNGI OLEH LISENSI CC0-1.0. JANGAN MENGGUNAKAN
               FOTO INI TANPA PERSETUJUAN DARI PEMILIK.
             </strong>
+            <br>
+            Edit this page on <b>Github</b>
           </p>
         </div>
       </section>
     </footer>
   </div>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 82 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 84 */;
 		echo 'js/responsee.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 83 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 85 */;
 		echo 'js/jquery.events.touch.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 84 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 86 */;
 		echo 'owl-carousel/owl.carousel.js"></script>
   <script type="text/javascript" src="';
-		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 85 */;
+		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 87 */;
 		echo 'js/template-scripts.js"></script>
 </body>
 
