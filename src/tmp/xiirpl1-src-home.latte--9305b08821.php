@@ -27,7 +27,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
 	{
 		extract($this->params);
 		if (!$this->getReferringTemplate() || $this->getReferenceType() === "extends") {
-			foreach (array_intersect_key(['album' => '134', 'potrait' => '147'], $this->params) as $ʟ_v => $ʟ_l) {
+			foreach (array_intersect_key(['key' => '134', 'value' => '134', 'potrait' => '152'], $this->params) as $ʟ_v => $ʟ_l) {
 				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
 			}
 		}
@@ -83,7 +83,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
         </div>
         <img class="full-img" src="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 36 */;
-		echo 'img/album/20220423151457_IMG_4523.jpg" alt="">
+		echo 'img/album/20220423151457_IMG_4523.jpg" loading="lazy" alt="">
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -120,7 +120,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
         </div>
         <img class="full-img" src="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 71 */;
-		echo 'img/album/20220423151548_IMG_4527.jpg" alt="">
+		echo 'img/album/20220423151548_IMG_4527.jpg" loading="lazy" alt="">
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -140,7 +140,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
         </div>
         <img class="full-img" src="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 89 */;
-		echo 'img/album/20220423151601_IMG_4528.jpg" alt="">
+		echo 'img/album/20220423151601_IMG_4528.jpg" loading="lazy" alt="">
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -160,7 +160,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
         </div>
         <img class="full-img" src="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 107 */;
-		echo 'img/album/20220423151529_IMG_4526.jpg" alt="">
+		echo 'img/album/20220423151529_IMG_4526.jpg" loading="lazy" alt="">
       </a>
     </div>
     <div class="s-12 m-6 l-five margin-bottom">
@@ -180,7 +180,7 @@ final class Template9305b08821 extends Latte\Runtime\Template
         </div>
         <img class="full-img" src="';
 		echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 125 */;
-		echo 'img/album/20220423151502_IMG_4524.jpg" alt="">
+		echo 'img/album/20220423151502_IMG_4524.jpg" loading="lazy" alt="">
       </a>
     </div>
 
@@ -191,41 +191,48 @@ final class Template9305b08821 extends Latte\Runtime\Template
 
 ';
 		$iterations = 0;
-		foreach ($albums as $album) /* line 134 */ {
-			echo '    <div class="s-12 m-6 l-five">
-      <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
-        <img class="full-img" src="';
-			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 137 */;
+		foreach ($albums as $key => $value) /* line 134 */ {
+			if (array_key_last($albums) == $key) /* line 135 */ {
+				echo '    <div class="s-12 m-6 l-five margin-bottom">
+';
+			} else /* line 137 */ {
+				echo '      <div class="s-12 m-6 l-five">
+';
+			}
+			echo '        <a class="image-with-hover-overlay image-hover-zoom" href="#" title="Portfolio Image">
+          <img class="full-img" src="';
+			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 141 */;
 			echo 'img/album/';
-			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($album)) /* line 137 */;
-			echo '" alt="" style="height: 180px">
-      </a>
-    </div>
+			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($value)) /* line 141 */;
+			echo '" alt="" loading="lazy" style="height: 230px">
+        </a>
+      </div>
 ';
 			$iterations++;
 		}
-		echo '
-    <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
-      Potrait
-    </h3>
-    <hr>
+		echo '      <div class="s-12">
+        <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
+          Potrait
+        </h3>
+        <hr>
+      </div>
 
 ';
 		$iterations = 0;
-		foreach ($potraits as $potrait) /* line 147 */ {
-			echo '    <div class="s-12 m-6 l-five">
-      <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
-        <img class="full-img" src="';
-			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 150 */;
+		foreach ($potraits as $potrait) /* line 152 */ {
+			echo '      <div class="s-12 m-6 l-five">
+        <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
+          <img class="full-img" src="';
+			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl(Xii\Rpl1\Helper::asset())) /* line 155 */;
 			echo 'img/potrait/';
-			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($potrait)) /* line 150 */;
-			echo '" alt="">
-      </a>
-    </div>
+			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($potrait)) /* line 155 */;
+			echo '" loading="lazy" alt="">
+        </a>
+      </div>
 ';
 			$iterations++;
 		}
-		echo '  </div>
+		echo '    </div>
 </article>
 ';
 	}

@@ -33,7 +33,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151457_IMG_4523.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151457_IMG_4523.jpg" loading="lazy" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -68,7 +68,7 @@
           </div>
 
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151548_IMG_4527.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151548_IMG_4527.jpg" loading="lazy" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -86,7 +86,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151601_IMG_4528.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151601_IMG_4528.jpg" loading="lazy" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five">
@@ -104,7 +104,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151529_IMG_4526.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151529_IMG_4526.jpg" loading="lazy" alt="" />
       </a>
     </div>
     <div class="s-12 m-6 l-five margin-bottom">
@@ -122,7 +122,7 @@
             </p>
           </div>
         </div>
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151502_IMG_4524.jpg" alt="" />
+        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/20220423151502_IMG_4524.jpg" loading="lazy" alt="" />
       </a>
     </div>
 
@@ -131,26 +131,31 @@
     </h3>
     <hr />
 
-    {foreach $albums as $album}
-    <div class="s-12 m-6 l-five">
-      <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/{$album}" alt="" style="height: 180px"/>
-      </a>
-    </div>
-    {/foreach}
+    {foreach $albums as $key => $value}
+    {if array_key_last($albums) == $key}
+    <div class="s-12 m-6 l-five margin-bottom">
+      {else}
+      <div class="s-12 m-6 l-five">
+        {/if}
+        <a class="image-with-hover-overlay image-hover-zoom" href="#" title="Portfolio Image">
+          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/album/{$value}" alt="" loading="lazy" style="height: 230px" />
+        </a>
+      </div>
+      {/foreach}
+      <div class="s-12">
+        <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
+          Potrait
+        </h3>
+        <hr />
+      </div>
 
-    <h3 class="text-center text-dark text-l-size-60 text-l-size-headline text-thin text-line-height-1">
-      Potrait
-    </h3>
-    <hr />
-
-    {foreach $potraits as $potrait}
-    <div class="s-12 m-6 l-five">
-      <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
-        <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/potrait/{$potrait}" alt=""/>
-      </a>
+      {foreach $potraits as $potrait}
+      <div class="s-12 m-6 l-five">
+        <a class="image-with-hover-overlay image-hover-zoom" href="/" title="Portfolio Image">
+          <img class="full-img" src="{=Xii\Rpl1\Helper::asset()}img/potrait/{$potrait}" loading="lazy" alt="" />
+        </a>
+      </div>
+      {/foreach}
     </div>
-    {/foreach}
-  </div>
 </article>
 {/block}
