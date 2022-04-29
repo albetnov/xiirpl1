@@ -2,7 +2,7 @@
 
 // Entry Point (All logic required by views belongs to this file.)
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 use Xii\Rpl1\Helper;
 use Xii\Rpl1\Parser;
@@ -21,8 +21,8 @@ function about()
 {
     $data = Parser::parse([
         'Bu Nur' => [
-            'gambar' => 'bunur.jpg',
-            'jabatan' => 'Wali Kelas'
+            'gambar'  => 'bunur.jpg',
+            'jabatan' => 'Wali Kelas',
         ],
         'Vincent' => [
             'gambar'  => 'vincent.jpg',
@@ -33,25 +33,25 @@ function about()
             'jabatan' => 'Wakil Ketua Kelas',
         ],
         'Ricky' => [
-            'gambar' => 'ricky.jpg',
-            'jabatan' => 'Bendahara'
+            'gambar'  => 'ricky.jpg',
+            'jabatan' => 'Bendahara',
         ],
         'Afina' => [
-            'gambar' => 'afina.jpg',
-            'jabatan' => 'Sektaris'
+            'gambar'  => 'afina.jpg',
+            'jabatan' => 'Sektaris',
         ],
         'Hernando' => [
-            'gambar' => 'hernando.jpg',
-            'jabatan' => 'Keamanan'
+            'gambar'  => 'hernando.jpg',
+            'jabatan' => 'Keamanan',
         ],
         'Kimberly' => [
-            'gambar' => 'kimberly.jpg',
-            'jabatan' => 'Koordinator Lomba'
+            'gambar'  => 'kimberly.jpg',
+            'jabatan' => 'Koordinator Lomba',
         ],
         'Maher' => [
-            'gambar' => 'maher.jpg',
-            'jabatan' => 'Koordinator Lomba'
-        ]
+            'gambar'  => 'maher.jpg',
+            'jabatan' => 'Koordinator Lomba',
+        ],
     ]);
 
     return Helper::render('about-us', compact('data'));
@@ -66,13 +66,13 @@ function home()
 {
     $albums = [];
     $exclude = ['.', '..', '20220423193334__MG_4802_1.jpg', '20220423193334__MG_4802_2.jpg', '20220423193334__MG_4802_3.jpg', '20220423193334__MG_4802_4.jpg'];
-    $dir = array_diff(scandir(__DIR__ . '/img/album/'), $exclude);
+    $dir = array_diff(scandir(__DIR__.'/img/album/'), $exclude);
     foreach ($dir as $file) {
         $albums[] = $file;
     }
 
     $potraits = [];
-    $dir2 = array_diff(scandir(__DIR__ . '/img/potrait/'), ['.', '..']);
+    $dir2 = array_diff(scandir(__DIR__.'/img/potrait/'), ['.', '..']);
     foreach ($dir2 as $file) {
         $potraits[] = $file;
     }
@@ -84,11 +84,11 @@ function rplsatu()
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (!$_POST['kirim']) {
-            die('Ada yang salah!');
+            exit('Ada yang salah!');
         }
         $token = htmlspecialchars($_POST['token']) ?? null;
         if (!$token || $token !== $_SESSION['token']) {
-            die('Ada yang salah! token');
+            exit('Ada yang salah! token');
         }
         $password = strip_tags(htmlspecialchars($_POST['password']));
         if ($password == 'xrpl2') {
@@ -97,6 +97,7 @@ function rplsatu()
             return Helper::render('rpl-satu', ['error' => 'Password invalid']);
         }
     }
+
     return Helper::render('rpl-satu');
 }
 
