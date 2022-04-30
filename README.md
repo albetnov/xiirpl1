@@ -1,5 +1,7 @@
 ## XII RPL 1
 
+> Deployed in [https://xiirpl1.herokuapp.com](https://xiirpl1.herokuapp.com)
+
 Project Website Album Sederhana
 
 ## Keperluan
@@ -13,6 +15,8 @@ Project Website Album Sederhana
 - Buka cmd di directory public
 - Ketik `php -s localhost:8080`.
 - Buka `localhost:8080` pada browser anda.
+
+## Credits
 
 > Bought to you by Albet Novendo, Ricky Roy Nardson, Hernando, Irwanda.
 
