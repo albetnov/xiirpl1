@@ -24,6 +24,7 @@ class Parser
                         src="img/classes/{$value['gambar']}"
                         alt="{$key}"
                         title="{$key}"
+                        loading="lazy"
                     />
                     <h3
                         class="text-s-size-16 text-size-20 text-line-height-1 text-dark margin-top-20 margin-bottom-0"
