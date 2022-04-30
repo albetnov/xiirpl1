@@ -2,7 +2,7 @@
 
 // Entry Point (All logic required by views belongs to this file.)
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 use Xii\Rpl1\Helper;
 use Xii\Rpl1\Parser;
@@ -66,13 +66,13 @@ function home()
 {
     $albums = [];
     $exclude = ['.', '..', '20220423193334__MG_4802_1.jpg', '20220423193334__MG_4802_2.jpg', '20220423193334__MG_4802_3.jpg', '20220423193334__MG_4802_4.jpg'];
-    $dir = array_diff(scandir(__DIR__ . '/img/album/'), $exclude);
+    $dir = array_diff(scandir(__DIR__.'/img/album/'), $exclude);
     foreach ($dir as $file) {
         $albums[] = $file;
     }
 
     $potraits = [];
-    $dir2 = array_diff(scandir(__DIR__ . '/img/potrait/'), ['.', '..']);
+    $dir2 = array_diff(scandir(__DIR__.'/img/potrait/'), ['.', '..']);
     foreach ($dir2 as $file) {
         $potraits[] = $file;
     }

@@ -6,19 +6,20 @@ use Latte\Engine;
 
 class Helper
 {
-
     /**
      * Mendapatkan config status aplikasi.
-     * 
-     * @return boolean
+     *
+     * @return bool
      */
     private static function productionState()
     {
         if (isset($_ENV['status']) && $_ENV['status']) {
             return true;
         }
+
         return false;
     }
+
     /**
      * Mendapatkan protocol dari url host.
      *
@@ -42,13 +43,13 @@ class Helper
      */
     public static function url(string $path): string
     {
-        $port = isset($_SERVER['SERVER_PORT']) ? ':' . $_SERVER['SERVER_PORT'] : '';
+        $port = isset($_SERVER['SERVER_PORT']) ? ':'.$_SERVER['SERVER_PORT'] : '';
 
         if (self::productionState()) {
-            return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'] . '/?url=' . $path;
+            return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'].'/?url='.$path;
         }
 
-        return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'] . $port . '/?url=' . $path;
+        return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'].$port.'/?url='.$path;
     }
 
     /**
@@ -58,13 +59,13 @@ class Helper
      */
     public static function baseUrl()
     {
-        $port = isset($_SERVER['SERVER_PORT']) ? ':' . $_SERVER['SERVER_PORT'] : '';
+        $port = isset($_SERVER['SERVER_PORT']) ? ':'.$_SERVER['SERVER_PORT'] : '';
 
         if (self::productionState()) {
-            return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'];
+            return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'];
         }
 
-        return self::get_http_protocol() . '://' . $_SERVER['SERVER_NAME'] . $port;
+        return self::get_http_protocol().'://'.$_SERVER['SERVER_NAME'].$port;
     }
 
     /**
@@ -75,7 +76,7 @@ class Helper
      */
     public static function asset()
     {
-        return self::baseUrl() . '/';
+        return self::baseUrl().'/';
     }
 
     /**
@@ -89,9 +90,9 @@ class Helper
     public static function render($viewPath, $data = [])
     {
         $latte = new Engine();
-        $path = __DIR__ . '/tmp';
+        $path = __DIR__.'/tmp';
         if (!is_dir($path)) {
-            mkdir(__DIR__ . 'tmp');
+            mkdir(__DIR__.'tmp');
             mkdir($path);
         }
 
@@ -125,6 +126,6 @@ class Helper
 
         $data['quotes'] = $quotes;
 
-        return $latte->render(__DIR__ . '/' . $viewPath . '.latte', $data);
+        return $latte->render(__DIR__.'/'.$viewPath.'.latte', $data);
     }
 }
